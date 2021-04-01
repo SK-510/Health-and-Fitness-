@@ -1,0 +1,117 @@
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+def fun():
+    print("Enter 1 for adding the details of Harry, Rohan and Hammad OR 2 for getting all the details of Harry, Rohan and Hammad")
+    r_or_w=int(input())
+    if r_or_w==1:
+        print("Enter 1 for Harry OR 2 for Rohan OR 3 for Hammad")
+        s=int(input())
+        if s==1:
+            print("Enter 1 for entering the food of Harry OR 2 for entering the exercise of Harry")
+            a=int(input())
+            if a==1:
+                f=open("Harry_Food.txt","a")
+                dt=str(getdate())
+                print("Enter the Food Harry Eats at",dt)
+                food=input()
+                f.write("\n{")
+                f.write(dt)
+                f.write("} ")
+                f.write(food)
+                f.close()
+                return "You have entered the details successfully"
+            elif a==2:
+                g=open("Harry_Exercise.txt", "a")
+                dt=str(getdate())
+                print("Enter the Exercise Harry did at",dt)
+                ex=input()
+                g.write("\n{")
+                g.write(dt)
+                g.write("} ")
+                g.write(ex)
+                g.close()
+                return "You have entered the details successfully"
+        elif s==2:
+            print("Enter 1 for entering the food of Rohan OR 2 for entering the exercise of Rohan")
+            a = int(input())
+            if a==1:
+                h=open("Rohan_Food.txt", "a")
+                dt=str(getdate())
+                print("Enter the Food Rohan Eats at",dt)
+                food=input()
+                h.write("\n{")
+                h.write(dt)
+                h.write("} ")
+                h.write(food)
+                h.close()
+                return "You have entered the details successfully"
+            elif a==2:
+                i=open("Rohan_Exercise.txt", "a")
+                dt=str(getdate())
+                print("Enter the Exercise Rohan did at",dt)
+                ex=input()
+                i.write("\n{")
+                i.write(dt)
+                i.write("} ")
+                i.write(ex)
+                i.close()
+                return "You have entered the details successfully"
+        elif s==3:
+            print("Enter 1 for entering the food of Hammad OR 2 for entering the exercise of Hammad")
+            a = int(input())
+            if a==1:
+                j=open("Hammad_Food.txt", "a")
+                dt=str(getdate())
+                print("Enter the Food Hammad Eats at",dt)
+                food=input()
+                j.write("\n{")
+                j.write(dt)
+                j.write("} ")
+                j.write(food)
+                j.close()
+                return "You have entered the details successfully"
+            elif a==2:
+                k=open("Hammad_Exercise.txt", "a")
+                dt=str(getdate())
+                print("Enter the Exercise Hammad did at",dt)
+                ex=input()
+                k.write("\n{")
+                k.write(dt)
+                k.write("} ")
+                k.write(ex)
+                k.close()
+                return "You have entered the details successfully"
+    elif r_or_w==2:
+        print("Enter 1 for Harry OR 2 for Rohan OR 3 for Hammad")
+        s=int(input())
+        if s==1:
+            print("Enter 1 to get the details of Food Harry eats OR 2 to get the details of Exercises Harry did")
+            a=int(input())
+            if a==1:
+                f=open("Harry_Food.txt")
+                return f.read()
+            elif a==2:
+                g=open("Harry_Exercise.txt")
+                return g.read()
+        elif s==2:
+            print("Enter 1 to get the details of Food Rohan eats OR 2 to get the details of Exercises Rohan did")
+            a = int(input())
+            if a==1:
+                h=open("Rohan_Food.txt")
+                return h.read()
+            elif a==2:
+                i=open("Rohan_Exercise.txt")
+                return i.read()
+        elif s==3:
+            print("Enter 1 to get the details of Food Hammad eats OR 2 to get the details of Exercises Hammad did")
+            a = int(input())
+            if a == 1:
+                j = open("Hammad_Food.txt")
+                return j.read()
+            elif a == 2:
+                k = open("Hammad_Exercise.txt")
+                return k.read()
+
+ob=fun()
+print(ob)
